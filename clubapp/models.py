@@ -10,3 +10,11 @@ class Clubprofile(models.Model):
     phone_no=models.CharField(max_length=100,null=True,blank=True)
     email=models.CharField(max_length=100,null=True,blank=True)
     club_owner=models.CharField(max_length=100,null=True,blank=True)
+
+class Emergencyalerts(models.Model):
+    login_id=models.ForeignKey(UserProfile,on_delete=models.CASCADE)
+    alert=models.CharField(max_length=100,null=True,blank=True)
+    alertdate=models.CharField(max_length=100,null=True,blank=True)
+    alerttime=models.CharField(max_length=100,null=True,blank=True)
+    
+

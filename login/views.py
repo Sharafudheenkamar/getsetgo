@@ -5,7 +5,7 @@ from .models import UserProfile,Token
 from django.contrib.auth import authenticate
 from django.contrib import messages
 import json
-from .form import Clubregistrationform,Eoregistrationform
+from .form import Clubregistrationform,Eoregistrationform,Schoolregistrationform,Collegeregistrationform
 from django.http import HttpResponse
 
 # Create your views here.
