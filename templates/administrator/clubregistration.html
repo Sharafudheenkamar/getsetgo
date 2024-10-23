@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .registration-container {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        .registration-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .registration-container input[type="text"],
+        .registration-container input[type="email"],
+        .registration-container input[type="password"],
+        .registration-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .registration-container textarea {
+            resize: vertical;
+        }
+
+        .registration-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .registration-container button:hover {
+            background-color: #45a049;
+        }
+
+        .registration-container .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .registration-container .login-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .registration-container .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Club Registration</h2>
+        <form action="/register" method="POST">
+            <input type="text" placeholder="Club ID" name="club_id" required>
+            <input type="text" placeholder="Club Name" name="clubname" required>
+            <textarea placeholder="Address" name="address" rows="3" required></textarea>
+            <input type="text" placeholder="Phone Number" name="phone_no" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="text" placeholder="Club Owner" name="club_owner" required>
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Register</button>
+            <div class="login-link">
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
